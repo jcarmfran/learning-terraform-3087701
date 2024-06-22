@@ -12,7 +12,7 @@ variable "instance_type" {
 ### AMI VARIABLE ###
 ####################
 
-variable "ami_filter" "app_ami" {
+variable "ami_filter" {
   description = "Name filter and owner for AMI"
 
   type = object({
@@ -22,7 +22,7 @@ variable "ami_filter" "app_ami" {
 
   default = {
     name = "bitnami-tomcat-*-x86_64-hvm-ebs-nami"
-    owners = "979382823631" # Bitnami
+    owner = "979382823631" # Bitnami
   }
 }
 
